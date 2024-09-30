@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from "./myComponent/nav/nav.component";
-
+import { FooterComponent } from './myComponent/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent],
-  // templateUrl: './app.component.html',
-  templateUrl: './myComponent/nav/nav.component.html',
-  // styleUrl: './app.component.css'
-  styleUrl: './myComponent/nav/nav.component.css',
+  imports: [RouterOutlet, NavComponent,FooterComponent],
+  templateUrl: './app.component.html',
+  // templateUrl: './myComponent/footer/footer.component.html',
+  styleUrl: './app.component.css'
+  // styleUrl: './myComponent/footer/footer.component.css',
 })
 export class AppComponent {
   title = 'e-commerce';
