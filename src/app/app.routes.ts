@@ -7,6 +7,7 @@ import { NavComponent } from './myComponent/nav/nav.component';
 import { ContactUsComponent } from './myComponent/contact-us/contact-us.component';
 import { CartComponent } from './myComponent/cart/cart.component';
 import { AboutComponent } from './myComponent/about/about.component';
+import { LogInComponent } from './myComponent/log-in/log-in.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,8 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'login', component:LogInComponent},
+  {path: 'about',component:AboutComponent},
 
   { path: '**', component: NotFoundComponent },
 ];
