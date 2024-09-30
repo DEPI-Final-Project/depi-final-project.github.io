@@ -1,1 +1,9 @@
-<p>cart works!</p>
+<div *ngIf="cart">
+    <!-- <h2>Cart ID: {{ cart.id }}</h2> -->
+    <div *ngFor="let product of products" class="product-card">
+        <img [src]="product.image" alt="{{ product.title }}">
+        <h2>{{ product.title }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <p>Quantity: {{ getProductQuantity(product.id) }}</p>
+    </div>
+</div>
