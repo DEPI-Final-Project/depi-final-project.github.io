@@ -1,11 +1,19 @@
-li a{
+li a {
     color: white;
     right: 100px;
     margin-left: 20px;
 }
-li a:hover{
+
+li a:hover {
     color: #febc12;
 }
-button{
+
+button {
     margin-right: 30px;
+}
+
+.navbar-nav,
+.nav-link,
+.navbar-brand {
+    cursor: pointer;
 }

@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Import FormsModule if needed
-import { AppComponent } from './app.component'; // Adjust the path as necessary
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { routes } from './app.routes';
 
 @NgModule({
-    declarations: [
-    ],
-    imports: [
-      BrowserModule,
-      AppComponent,
-      FormsModule
-    ],
-    providers: [],
-  })
-  export class AppModule { }
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    FormsModule
+  ],
+  providers: [],
+})
+export class AppModule { }
