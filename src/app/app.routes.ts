@@ -8,4 +8,7 @@ export const routes: Routes = [
   { path: 'about', loadComponent: () => import('./myComponent/about/about.component').then(m => m.AboutComponent) },
   { path: 'login', loadComponent: () => import('./myComponent/log-in/log-in.component').then(m => m.LogInComponent) },
   { path: '**', loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent) }
+
+
+
 ];
