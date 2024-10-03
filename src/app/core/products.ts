@@ -1,13 +1,13 @@
 
- 
 
 
 
-    
-  
-  
 
-export interface Products  {
+
+
+
+
+export interface Products {
   id: number;
   title: string;
   price: number;
@@ -16,6 +16,7 @@ export interface Products  {
   creationAt: string;
   updatedAt: string;
   category: Category;
+  quantity: number;
 }
 
 interface Category {

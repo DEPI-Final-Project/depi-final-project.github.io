@@ -7,12 +7,9 @@ import { Injectable } from '@angular/core';
 })
 export class ProductsService {
 
-  constructor( private _HttpClient:HttpClient) {}     
-  
-  
-  getProuduct():Observable<any> {
-    return this._HttpClient.get('https://api.escuelajs.co/api/v1/products')
-  
-}
-  
+  constructor(private _HttpClient: HttpClient) { }
+
+  getProduct(): Observable<any> {
+    return this._HttpClient.get('https://api.escuelajs.co/api/v1/products');
+  }
 }

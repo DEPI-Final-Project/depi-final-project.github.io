@@ -1,62 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../cart.service';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterOutlet } from '@angular/router';
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { CartService } from '../../core/cart.service';
+import { Products } from '../../core/products';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
-  standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterOutlet],
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
+  standalone: true,
+  imports: [CommonModule, RouterLink, RouterOutlet]
 })
 export class CartComponent implements OnInit {
-  cart: any;
-  products: Product[] = [];
+  cartItems: Products[] = [];
+  totalAmount: number = 0;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.loadCart(1); // Assuming cart ID is 1 for demonstration
+    this.cartItems = this.cartService.getCartItems();
+    this.calculateTotal();
   }
 
-  loadCart(cartId: number): void {
-    this.cartService.getCart(cartId).subscribe({
-      next: (data) => {
-        this.cart = data;
-        this.loadProducts(data.products);
-      },
-      error: (error) => {
-        console.error('Error fetching cart data', error);
-      }
-    });
+  calculateTotal(): void {
+    this.totalAmount = this.cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   }
 
-  loadProducts(cartProducts: Array<{ productId: number; quantity: number }>): void {
-    cartProducts.forEach(cartProduct => {
-      this.cartService.getProduct(cartProduct.productId).subscribe({
-        next: (product: Product) => {
-          this.products.push(product);
-        },
-        error: (error) => {
-          console.error('Error fetching product data', error);
-        }
-      });
-    });
+  getSafeUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
-  getProductQuantity(productId: number): number {
-    const product = this.cart.products.find((p: { productId: number; quantity: number }) => p.productId === productId);
-    return product ? product.quantity : 0;
+  incrementQuantity(item: Products): void {
+    item.quantity++;
+    this.calculateTotal();
+  }
+
+  decrementQuantity(item: Products): void {
+    if (item.quantity > 1) {
+      item.quantity--;
+      this.calculateTotal();
+    }
+  }
+
+  removeItem(item: Products): void {
+    this.cartItems = this.cartItems.filter(cartItem => cartItem.id !== item.id);
+    this.calculateTotal();
   }
 }
