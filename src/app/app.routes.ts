@@ -9,4 +9,7 @@ export const routes: Routes = [
   { path: 'login', loadComponent: () => import('./myComponent/log-in/log-in.component').then(m => m.LogInComponent) },
   { path: 'footer', loadComponent: () => import('./myComponent/footer/footer.component').then(m => m.FooterComponent) },
   { path: '**', loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent) }
+
+
+
 ];
