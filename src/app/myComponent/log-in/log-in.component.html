@@ -6,22 +6,24 @@
         <div class="row justify-content-md-center">
           <hr class="border-warning-subtle mb-4">
 
-          <div class="col-md-auto text-center h5 text-warning font-weight-bold">
+          <div class="col text-center h5 text-warning font-weight-bold">
             Get updates
           </div>
           <hr class="border-warning-subtle mb-4">
 
-          <div class="col-md-auto text-center h3 text-light font-weight-bold">
+          <div class="col text-center h3 text-light font-weight-bold">
                 Our Newsletter
           </div>
           <hr class="border-warning-subtle mb-4">
 
-            <div class=" col-md-8 text-center card border-light-subtle shadow-sm">
-              <div class="col">
-                <input type="email" class=" form-control w-75 d-inline" name="mail" id="mail" placeholder="Enter your email address"  [(ngModel)]="SubscribeObj.mail" required>
-                <button class=" btn bsb-btn-xl btn-warning d-inline w-25 " type="submit" (click)="onSubscribe()" >Subscribe now</button>
+            <div class=" col text-center card border-light-subtle shadow-sm">
+              <div class="col-8">
+                <input type="email" class=" form-control   " name="mail" id="mail" placeholder="Enter your email address"  [(ngModel)]="SubscribeObj.mail" required>
               </div>
-          </div>
+              <div class="col-3">
+                <button class=" btn bsb-btn-xl btn-warning   col-3" type="submit" (click)="onSubscribe()" >Subscribe now</button>
+              </div>
+            </div>
           <hr class="border-warning-subtle mb-4">
         </div>
       </div>
