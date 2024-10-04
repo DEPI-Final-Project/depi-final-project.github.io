@@ -16,13 +16,15 @@
           </div>
           <hr class="border-warning-subtle mb-4">
 
-            <div class=" col text-center card border-light-subtle shadow-sm">
-              <div class="col-8">
-                <input type="email" class=" form-control   " name="mail" id="mail" placeholder="Enter your email address"  [(ngModel)]="SubscribeObj.mail" required>
+            <div class=" col-md-5  card border-light-subtle shadow-sm">
+              <div class="row ">
+              <div class="col-md-8">
+                <input type="email" class=" form-control" name="mail" id="mail" placeholder="Enter your email address"  [(ngModel)]="SubscribeObj.mail" required>
               </div>
-              <div class="col-3">
-                <button class=" btn bsb-btn-xl btn-warning   col-3" type="submit" (click)="onSubscribe()" >Subscribe now</button>
+              <div class="col-md-4">
+                <button class=" btn  btn-warning" type="submit" (click)="onSubscribe()" >Subscribe now</button>
               </div>
+            </div>
             </div>
           <hr class="border-warning-subtle mb-4">
         </div>
@@ -138,9 +140,13 @@
 
 <style>
   .componnt-back {
-    background-image: url('assets/imgGallery/background-for-login.jpg');
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    /* border:  solid black ; */
+
+    /* background-image: url('assets/imgGallery/background-for-login.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
   
   }
   .Getupdate
