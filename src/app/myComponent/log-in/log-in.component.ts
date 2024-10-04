@@ -59,6 +59,8 @@ onsginup(){
     email:'',
     password:''
   };
+  alert('user login sucessfully');
+  this.router.navigateByUrl('/home')
 
 }
 onlogin(){
