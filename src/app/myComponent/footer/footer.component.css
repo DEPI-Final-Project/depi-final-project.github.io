@@ -3,22 +3,19 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: bisque;
+    color: goldenrod;
 }
 footer{
-    background-color: #000000;
-    padding-top: 50px;
-}
-.container{
-    width: 1140px;margin: auto;display: flex;justify-content: center;
-}
+    background-color: black;
 
-h1{
-    font-size: 20px;margin-bottom: 15px;text-align: center; text-transform: capitalize;color: #febc12;
+    border-radius: 50px 50px  0 0;}
+
+
+h2{
+    font-size: 25px;margin-bottom: 30px;text-align: center; text-transform: capitalize;color: goldenrod;
 }
 p{
-      margin: auto;padding: 7px; text-transform: capitalize;
-}
+    color:rgb(230, 226, 217); margin: auto;padding: 5px; text-transform: capitalize; font-size:15px}
 
 .list li{
     width:auto ;
@@ -28,24 +25,23 @@ p{
     position: relative;
 }
 
-.social-icon{
-    text-align: center;
-    padding: 0;
-}
+
 .social-icon li{
     display: inline-block;text-align: center;padding: 5px;
 }
 .social-icon i{
-    color: aliceblue;
+   color:rgb(230, 226, 217);
     font-size: 25px;
 }
 a{
     text-decoration: none;
-    color: aliceblue ;
+      color: rgb(230, 226, 217);
+   
 }
 a:hover{
-  color:#febc12;  
+  color: goldenrod;  
 }
 .social-icon i:hover{
-    color: #febc12;
+      color: goldenrod;  
+    
 }
