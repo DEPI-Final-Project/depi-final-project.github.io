@@ -1,12 +1,20 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+
+
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
-  standalone: true
+  standalone: true,
+  imports :[CommonModule]
 })
+
+
+
 export class NavComponent implements OnInit {
   cartItemCount: number = 0; // Initial cart item count
 
@@ -34,7 +42,10 @@ export class NavComponent implements OnInit {
     }
   }
 
+
   // Function to navigate to a specified path
+  useIcon: boolean = true; 
+
   navigateTo(path: string) {
     this.router.navigate([path]);
   }

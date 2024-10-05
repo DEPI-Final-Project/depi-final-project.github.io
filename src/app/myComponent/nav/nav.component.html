@@ -29,9 +29,19 @@
         </li>
       </ul>  
       <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/login')">join now</button>
+
+      
       <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/cart')">
-        <i class="fas fa-shopping-cart" style="color: goldenrod;"></i>
+        <ng-container *ngIf="useIcon; else svgIcon">
+          <i class="fas fa-shopping-cart" style="color: goldenrod;"></i>
+        </ng-container>
+        <ng-template #svgIcon>
+          <svg class="svg-inline--fafa-cart-shopping" style="color: goldenrod;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!-- SVG content here -->
+          </svg>
+        </ng-template>
       </button>
+      
 
     </div>
        <!-- Login Button -->
