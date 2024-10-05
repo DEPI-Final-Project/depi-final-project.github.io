@@ -53,6 +53,7 @@
   /* About Description */
   .about-description {
     background-color: #111111; /* Dark gray/black background for description */
+    opacity: 40%;
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #d4af37; /* Gold border */
