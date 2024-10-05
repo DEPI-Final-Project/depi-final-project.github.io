@@ -16,11 +16,5 @@ export class HomeComponent {
   navigateToProducts() {
     this.router.navigateByUrl('/products');
   }
-  navigateToProducts1() {
-    this.router.navigateByUrl('/products');
-  }
-  navigateToProducts2() {
-    this.router.navigateByUrl('/products');
-  }
 
 }
