@@ -49,4 +49,8 @@ export class NavComponent implements OnInit {
   navigateTo(path: string) {
     this.router.navigate([path]);
   }
+  navigate(){
+    this.router.navigateByUrl('/payment')
+
+  }
 }
