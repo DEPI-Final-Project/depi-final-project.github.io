@@ -3,9 +3,11 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #ffffff; /* White text */
-    background-color: #000000; /* Black background */
-  }
+    background-color: #555551d2; /* Black background */
+      }
   
   .about-header {
     text-align: center;
@@ -53,7 +55,6 @@
   /* About Description */
   .about-description {
     background-color: #111111; /* Dark gray/black background for description */
-    opacity: 40%;
     padding: 30px;
     border-radius: 8px;
     border: 1px solid #d4af37; /* Gold border */
