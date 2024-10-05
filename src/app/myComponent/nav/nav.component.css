@@ -10,10 +10,12 @@ li a:hover {
     color: rgb(235, 228, 212); 
 }
 
-button {
-    margin-left:50px;
+.svgIcon
+{
+    margin-right:0;
 }
 
+ button{margin-left: 5px;}
 .navbar-nav,
 .nav-link,
 .navbar-brand {
