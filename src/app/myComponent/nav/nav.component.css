@@ -1,19 +1,24 @@
 li a {
     color: goldenrod;
     right: 100px;
-    margin-left: 10px;
-}
+   }
 
 li a:hover {
     color: rgb(235, 228, 212);
+}  
+ li .active{
+    color: rgb(235, 228, 212); 
 }
 
 button {
-    margin-left:100px;
+    margin-left:50px;
 }
 
 .navbar-nav,
 .nav-link,
 .navbar-brand {
     cursor: pointer;
+}
+.cart-icon a i{
+    color:goldenrod; 
 }
