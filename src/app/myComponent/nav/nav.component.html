@@ -27,15 +27,12 @@
         <li class="nav-item">
           <a class="nav-link fs-4" (click)="navigateTo('/category')">Category</a>
         </li>
- feature/categories-ux
+ 
        
        
       </ul>
        <!-- Login Button -->
-    <form class="d-flex">
-      <button class="btn btn-outline-warning fs-4" type="button" (click)="navigateTo('/login')">join now</button>
-
-      </form>
+    
 
 
       
@@ -43,7 +40,7 @@
 
           <!-- Login Button, cart, credit -->
     <div class="svgIcon col-3 ">
-      <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/login')">Join Now</button>
+      <button class="btn btn-outline-warning fs-4" type="button" (click)="navigateTo('/login')">Join Now</button>
       <button class="btn btn-outline-warning cart-icon" type="button" (click)="navigateTo('/cart')">
         <ng-container *ngIf="useIcon; else svgIcon">
           <i class="fas fa-shopping-cart" style="color: goldenrod;"></i>

@@ -17,13 +17,12 @@ import { CategoryComponent } from "../category/category.component";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  safeUrl1: any;
-  safeUrl2: any;
+  // safeUrl1: any;
+  // safeUrl2: any;
 
-  constructor(private sanitizer: DomSanitizer) {
-    this.safeUrl1 = this.sanitizer.bypassSecurityTrustUrl('https://api.escuelajs.co/api/v1/products');
-    this.safeUrl2 = this.sanitizer.bypassSecurityTrustUrl('https://placeimg.com/640/480/any');
-  }
+  // constructor(private sanitizer: DomSanitizer) {
+  //   this.safeUrl1 = this.sanitizer.bypassSecurityTrustUrl('https://api.escuelajs.co/api/v1/products');
+  // }
   text: string = '';
   private readonly _ProductsService = inject(ProductsService);
   private readonly _CartService = inject(CartService);
@@ -34,7 +33,7 @@ export class ProductsComponent implements OnInit {
     this._ProductsService.getPAllroduct().subscribe({
       next: (res) => {
         console.log(res);
-        this.productList = res;
+        this.productList = res.data;
       },
       error: (err) => {
         console.log(err);
