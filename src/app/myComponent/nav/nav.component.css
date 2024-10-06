@@ -1,7 +1,12 @@
 /* nav.component.css */
 .navbar {
-    padding: 1rem;
-}
+   
+    position: sticky;
+    top:0px; /* Stick to the top of the page */
+    padding: 10px 20px; /* Padding for spacing */
+    z-index: 1000; /* Ensures it stays above other content */
+    width: 100%; /* Full width navbar */
+  }
 
 .navbar-nav .nav-item .nav-link {
     color: white;
