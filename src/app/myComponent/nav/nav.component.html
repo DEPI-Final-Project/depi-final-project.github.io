@@ -1,19 +1,22 @@
-<!-- nav.component.html-->
-<nav class="navbar navbar-expand-md " style="  background-color: black;">
+<nav class="navbar navbar-expand-md" style="background-color: black;">
   <div class="container-fluid">
     <!-- logo  -->
+
    <img src=".\assets\imgGallery\logo.png" alt="logo" width="120px" height="100px" />
    <a class="navbar-brand" (click)="navigateTo('/home')" ></a>
      <!-- Toggle button for mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav col-9">
         <li class="nav-item">
+ 
           <a class="nav-link  active fs-4" aria-current="page" (click)="navigateTo('/home')">Home</a>
+
         </li>
         <li class="nav-item">
           <a class="nav-link fs-4" (click)="navigateTo('/about')">About</a>
@@ -24,6 +27,7 @@
         <li class="nav-item">
           <a class="nav-link fs-4" (click)="navigateTo('/category')">Category</a>
         </li>
+ feature/categories-ux
        
        
       </ul>
@@ -31,23 +35,51 @@
     <form class="d-flex">
       <button class="btn btn-outline-warning fs-4" type="button" (click)="navigateTo('/login')">join now</button>
 
+      </form>
+
+
       
-      <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/cart')">
+
+
+          <!-- Login Button, cart, credit -->
+    <div class="svgIcon col-3 ">
+      <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/login')">Join Now</button>
+      <button class="btn btn-outline-warning cart-icon" type="button" (click)="navigateTo('/cart')">
         <ng-container *ngIf="useIcon; else svgIcon">
           <i class="fas fa-shopping-cart" style="color: goldenrod;"></i>
+          <span *ngIf="cartItemCount > 0" class="badge rounded-badge">{{ cartItemCount }}</span>
         </ng-container>
         <ng-template #svgIcon>
-          <svg class="svg-inline--fafa-cart-shopping" style="color: goldenrod;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <svg class="svg-inline--fa fa-cart-shopping" style="color: goldenrod; font-size: 30px;" aria-hidden="true"
+            focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512">
+            <!-- SVG content here -->
+          </svg>
+          <span *ngIf="cartItemCount > 0" class="badge rounded-badge">{{ cartItemCount }}</span>
+        </ng-template>
+      </button>
+      
+      <button class="btn btn-outline-warning" type="button" (click)="navigate()">
+        <ng-container *ngIf="useIcon; else svgIcon">
+          <i class="fa fa-credit-card" style="color: goldenrod;"></i>
+        </ng-container>
+        <ng-template #svgIcon>
+          <svg class="svg-inline--fa fa-cart-shopping" style="color: goldenrod; font-size: 30px;" aria-hidden="true"
+            focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512">
             <!-- SVG content here -->
           </svg>
         </ng-template>
       </button>
-      
-    </form>
     </div>
-       <!-- Login Button -->
-      
-    
-  </div>
 
-</nav> 
+
+
+
+
+    </div>
+
+
+
+  </div>
+</nav>

@@ -1,52 +1,40 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Import CommonModule
-
-
+import { CommonModule } from '@angular/common';
+import { CartService } from '../../core/cart.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
   standalone: true,
-  imports :[CommonModule]
+  imports: [CommonModule]
 })
+export class NavComponent implements OnInit, OnDestroy {
+  cartItemCount: number = 0;
+  useIcon: boolean = true;
+  private subscription!: Subscription; // Use non-null assertion operator
 
-
-
-export class NavComponent implements OnInit {
-  cartItemCount: number = 0; // Initial cart item count
-
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.loadCartItems(); // Call this function to load initial cart data
+    this.subscription = this.cartService.getCartItemCount().subscribe(count => {
+      this.cartItemCount = count;
+    });
   }
 
-  // Example function to load the initial cart items count
-  loadCartItems() {
-    // Replace this with an actual API call to get the cart items count
-    this.cartItemCount = 3; // Example: Setting an initial value of 3
-  }
-
-  // Example function to add items to the cart
-  addToCart() {
-    this.cartItemCount++;
-  }
-
-  // Example function to remove items from the cart
-  removeFromCart() {
-    if (this.cartItemCount > 0) {
-      this.cartItemCount--;
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
     }
   }
 
-
-  // Function to navigate to a specified path
-  useIcon: boolean = true; 
-
   navigateTo(path: string) {
     this.router.navigate([path]);
+  }
+
+  navigate() {
+    this.router.navigateByUrl('/payment');
   }
 }
