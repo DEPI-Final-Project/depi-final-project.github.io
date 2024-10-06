@@ -1,10 +1,12 @@
 <nav class="navbar navbar-expand-md" style="background-color: black;">
   <div class="container-fluid">
     <!-- logo  -->
-    <img src="./assets/imgGallery/logo.png" alt="logo" width="120px" height="65px" />
-    <a class="navbar-brand" (click)="navigateTo('/home')"></a>
-    <!-- Toggle button for mobile -->
-    <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
+   <img src=".\assets\imgGallery\logo.png" alt="logo" width="120px" height="100px" />
+   <a class="navbar-brand" (click)="navigateTo('/home')" ></a>
+     <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,18 +14,29 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav col-9">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="navigateTo('/home')">Home</a>
+ 
+          <a class="nav-link  active fs-4" aria-current="page" (click)="navigateTo('/home')">Home</a>
+
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="navigateTo('/about')">About</a>
+          <a class="nav-link fs-4" (click)="navigateTo('/about')">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="navigateTo('/products')">Store</a>
+          <a class="nav-link fs-4" (click)="navigateTo('/products')">Store</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="navigateTo('/cart')">Cart</a>
+          <a class="nav-link fs-4" (click)="navigateTo('/category')">Category</a>
         </li>
+ feature/categories-ux
+       
+       
       </ul>
+       <!-- Login Button -->
+    <form class="d-flex">
+      <button class="btn btn-outline-warning fs-4" type="button" (click)="navigateTo('/login')">join now</button>
+
+      </form>
+
 
       
 
