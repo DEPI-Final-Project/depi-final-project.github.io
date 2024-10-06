@@ -4,13 +4,13 @@
     <img src="./assets/imgGallery/logo.png" alt="logo" width="120px" height="65px" />
     <a class="navbar-brand" (click)="navigateTo('/home')"></a>
     <!-- Toggle button for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav col-9">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" (click)="navigateTo('/home')">Home</a>
         </li>
@@ -24,9 +24,12 @@
           <a class="nav-link" (click)="navigateTo('/cart')">Cart</a>
         </li>
       </ul>
-    </div>
-    <!-- Login Button, cart, credit -->
-    <div class="svgIcon">
+
+      
+
+
+          <!-- Login Button, cart, credit -->
+    <div class="svgIcon col-3 ">
       <button class="btn btn-outline-warning" type="button" (click)="navigateTo('/login')">Join Now</button>
       <button class="btn btn-outline-warning cart-icon" type="button" (click)="navigateTo('/cart')">
         <ng-container *ngIf="useIcon; else svgIcon">
@@ -42,6 +45,7 @@
           <span *ngIf="cartItemCount > 0" class="badge rounded-badge">{{ cartItemCount }}</span>
         </ng-template>
       </button>
+      
       <button class="btn btn-outline-warning" type="button" (click)="navigate()">
         <ng-container *ngIf="useIcon; else svgIcon">
           <i class="fa fa-credit-card" style="color: goldenrod;"></i>
@@ -55,5 +59,14 @@
         </ng-template>
       </button>
     </div>
+
+
+
+
+
+    </div>
+
+
+
   </div>
 </nav>
