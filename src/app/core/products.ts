@@ -6,23 +6,36 @@
 
 
 
-
-export interface Products {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
+export interface Products  {
+  sold: number;
   images: string[];
-  creationAt: string;
-  updatedAt: string;
-  category: Category;
+  subcategory: Subcategory[];
+  ratingsQuantity: number;
+  _id: string;
+  title: string;
+  slug: string;
+  description: string;
   quantity: number;
+  price: number;
+  imageCover: string;
+  category: Category;
+  brand: Category;
+  ratingsAverage: number;
+  createdAt: string;
+  updatedAt: string;
+  id: string;
 }
 
 interface Category {
-  id: number;
+  _id: string;
   name: string;
+  slug: string;
   image: string;
-  creationAt: string;
-  updatedAt: string;
+}
+
+interface Subcategory {
+  _id: string;
+  name: string;
+  slug: string;
+  category: string;
 }
