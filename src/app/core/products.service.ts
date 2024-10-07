@@ -10,6 +10,6 @@ export class ProductsService {
   constructor(private _HttpClient: HttpClient) { }
 
   getPAllroduct(): Observable<any> {
-    return this._HttpClient.get('https://api.escuelajs.co/api/v1/products');
+    return this._HttpClient.get( 'https://ecommerce.routemisr.com/api/v1/products');
   }
 }
