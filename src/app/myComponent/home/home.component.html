@@ -11,91 +11,111 @@
 
 <div class="container-fluid Background-home">
     <div class="container">
-            <!-- for carousel -->
 
-        <div class="slider_section">
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-
-
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            <span>Sale 20% Off</span>
-                                            <br> On Everything
-                                        </h1>
-                                        <p>
-                                            🎉 Big Sale Alert! 🎉 Don’t miss out on our exclusive offer: 20% Off on Everything! Whether you’re looking for the latest fashion, must-have gadgets, or home essentials, now is the perfect time to shop and save. Hurry, this limited-time offer won’t last long—grab your favorites before they’re gone!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="carousel-item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            <span>User-Friendly</span>
-                                            <br> shopping experience
-                                        </h1>
-                                        <p>
-                                            With secure payment options and fast shipping, we make it easy for you to shop with confidence. Join our community of satisfied customers and discover why Eco-Trend is the preferred choice for savvy shoppers everywhere. Shop now and elevate your lifestyle!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    
+        
+<div class="home-container">
+    <!-- carousel section-->
+  
+ 
+    <div class="heading-section">
+ 
+        
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="home-content">
+              
+                <div class="detail-box">
+                    <h1>
+                        <span >Sale 20% Off</span>
+                        <br> On Everything
+                    </h1>
+                    <p
+                    class="font" >
+                        🎉 Big Sale Alert! 🎉 Don’t miss out on our exclusive offer: 20% Off on Everything! Whether you’re looking for the latest fashion, must-have gadgets, or home essentials, now is the perfect time to shop and save. Hurry, this limited-time offer won’t last long—grab your favorites before they’re gone!
+                    </p>
                 </div>
-
-                <!-- <div class="container">
-                    <ol class="carousel-indicators">
-                        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                        <li data-target="#customCarousel1" data-slide-to="1"></li>
-                        <li data-target="#customCarousel1" data-slide-to="2"></li>
-                    </ol>
-                </div> -->
-
+                
+               
+              </div>
             </div>
-        </div>
-
-
-            <!-- for shop bttn -->
-        <div>
-            <button class=" btn bsb-btn-xl btn-warning d-inline w-2 " type="submit" (click)=" navigateToProducts()">Shop Now </button>
-        </div>
-        <hr>
-
-            <!-- for counter -->
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="p-4 border bg-light">4 Years Experience</div>
+            <div class="carousel-item">
+              <div class="home-content">
+                <div class="detail-box">
+                    <h1>
+                        <span>User-Friendly</span>
+                        <br> shopping experience
+                    </h1>
+                    <p    class="font" >
+                        With secure payment options and fast shipping, we make it easy for you to shop with confidence. Join our community of satisfied customers and discover why Eco-Trend is the preferred choice for savvy shoppers everywhere. Shop now and elevate your lifestyle!
+                    </p>
                 </div>
-                <div class="col-md-3">
-                    <div class="p-4 border bg-light">Top Rated website <span class="rating">4.9⭐</span></div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-4 border bg-light">2K+ Products Sold</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-4 border bg-light">260+ Variant Products</div>
-                </div>
+        
+                
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="home-content">
+                <div class="detail-box">
+                    <h1>
+                       <span>
+                           your one-stop destination 
+                       </span>
+                       <br>
+                   for everything you need
+                       
+                    </h1>
+                    <p    class="font" >
+                       Whether you're searching for the latest gadgets, stylish apparel, home essentials, or unique gifts, we’ve got you covered. Our extensive selection ensures that you can find high-quality products at competitive prices, all in one convenient place
+                    </p>
+                
+              </div>
+            </div>
+
+
+          
+           
+          </div>
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          </div>
+          </div>
+           <!-- for shop bttn -->
+            <div class="container">
+      <div class="shopbutton">
+        <button class=" btn bsb-btn-xl btn-warning d-inline w-2 " type="submit" (click)=" navigateToProducts()">Shop Now </button>
         </div>
-
-
-
-    </div>
 </div>
+        </div>
+        </div>
+        <div>
+        
+        <div class="row g-0"> <!-- g-0 removes gutters -->
+            <div class="col-md-3">
+                <div class="p-4 border 
+                "><span class="f-header">4 </span><p class="f-paragraph">Years Experience</p></div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border 
+                
+                "><span class="rating f-header">4.9⭐</span><p class="f-paragraph">Top Rated website </p></div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border 
+                
+                "><span class="f-header">2K+</span><p class="f-paragraph">Products Sold</p> </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 border  "><span class="f-header">260+ </span><p class="f-paragraph">Variant Products</p></div>
+            </div>
+        </div>
 
 
 <div class="container">

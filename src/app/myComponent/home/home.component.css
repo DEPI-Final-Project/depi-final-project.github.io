@@ -1,0 +1,71 @@
+.home-container {
+    max-width:800px;
+    max-height: 500px;
+    margin-left: 0px;
+ 
+    padding:0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff; 
+  
+    
+ 
+ 
+    
+      }
+      .heading-section {
+      
+        
+        
+        color: white;
+        padding: 3rem 0;
+      }  
+      .home-content {
+        max-width: 600px;
+        margin: auto;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.46);
+        color: black;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ 
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(230, 187, 47, 0.5);
+        border: 10px;
+      }
+      .home-text {
+        font-style: italic;
+        margin-bottom: 0.5rem;
+      }
+      .detail-box h1 {
+ 
+ font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: gold;
+      line-height: 70px;
+ 
+      }
+      .font{
+        font-weight:bolder;
+      }
+      .shopbutton{
+        position: relative;
+        top: 25px;
+        left:350px
+      }
+      .f-header{
+        color: gold;
+        font-size: medium;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      .f-paragraph{
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .grid{
+        border-radius:15px;
+       
+        
+      }
