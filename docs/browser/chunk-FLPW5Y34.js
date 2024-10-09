@@ -1,0 +1,1 @@
+import{aa as o,vb as n}from"./chunk-V2OZTUYM.js";var p=(()=>{class t{static{this.\u0275fac=function(e){return new(e||t)}}static{this.\u0275cmp=o({type:t,selectors:[["app-not-found"]],standalone:!0,features:[n],decls:0,vars:0,template:function(e,r){}})}}return t})();export{p as NotFoundComponent};
