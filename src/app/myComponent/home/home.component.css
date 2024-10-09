@@ -65,7 +65,9 @@
         font-size: 25px;
       }
       .grid{
-        border-radius:15px;
+        border-radius:30px;
+        max-width :100px;
+        
        
         
       }
