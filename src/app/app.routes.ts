@@ -1,7 +1,7 @@
 import { CategoryComponent } from './myComponent/category/category.component';
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [
+export const routes: Routes = [ { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', loadComponent: () => import('./myComponent/home/home.component').then(m => m.HomeComponent) },
   { path: 'products', loadComponent: () => import('./myComponent/products/products.component').then(m => m.ProductsComponent) },
   { path: 'category', loadComponent: () => import('./myComponent/category/category.component').then(m => m.CategoryComponent) },
