@@ -1,7 +1,7 @@
 
 
 .container{
-    height: 60vh;
+    height: auto;
 }
 .all-categories:hover{
     color: #EDAD09;
