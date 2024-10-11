@@ -16,5 +16,10 @@ export class HomeComponent {
   navigateToProducts() {
     this.router.navigateByUrl('/products');
   }
+  navigateToNOTFOUND(){
+    this.router.navigateByUrl('/**');
+
+
+  }
 
 }
