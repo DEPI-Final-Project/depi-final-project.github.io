@@ -59,7 +59,7 @@ onsginup(){
     email:'',
     password:''
   };
-  alert('user login sucessfully');
+  alert('Hi ' + this.signupUsers[this.signupUsers.length - 1].Firstname + '!');
   this.router.navigateByUrl('/home')
 
 }
@@ -67,7 +67,7 @@ onlogin(){
   // debugger
   const isUserExist = this.signupUsers.find(m=> m.Email == this.loginObj.Email && m.password ==this.loginObj.password);
   if(isUserExist !=undefined){
-    alert('user login sucessfully');
+    alert('Hi ' + this.signupUsers[this.signupUsers.length - 1].Firstname + '!');
     this.router.navigateByUrl('/home')
   }else{
     alert('wrong credentials');
