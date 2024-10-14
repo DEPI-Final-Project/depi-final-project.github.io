@@ -78,6 +78,7 @@
 .gallery-item:hover{
     transform: scale(1.2);
     transition: all ease-in-out .4s;
+    z-index: 5;
 }
 
 
