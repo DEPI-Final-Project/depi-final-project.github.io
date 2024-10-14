@@ -23,7 +23,7 @@
 .parent:hover{
     border: solid 3px black;
     color: #EDAD09;
-    cursor: pointer;
+    cursor: default;
     transform: scale(1.1);
     transition: all ease-in-out .4s;
 }
