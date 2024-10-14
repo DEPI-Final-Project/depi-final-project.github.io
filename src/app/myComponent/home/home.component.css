@@ -75,6 +75,12 @@
     animation-delay: calc(0.1s * var(--i)); /* Stagger the animations */
 }
 
+.gallery-item:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .4s;
+}
+
+
 /* Keyframe animation */
 @keyframes fadeIn {
     to {
