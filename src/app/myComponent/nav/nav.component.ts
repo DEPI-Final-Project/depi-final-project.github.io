@@ -37,4 +37,16 @@ export class NavComponent implements OnInit, OnDestroy {
   navigate() {
     this.router.navigateByUrl('/payment');
   }
+  
+  isNavbarCollapsed = true;
+
+  // Toggle the navbar between collapsed and expanded states
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
+  // Close the navbar after clicking a link
+  closeNavbar() {
+    this.isNavbarCollapsed = true;
+  }
 }
